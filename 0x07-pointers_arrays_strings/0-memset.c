@@ -6,15 +6,17 @@
  * @b: The character to fill the memory area with
  * @n: The number of bytes to be filled
  *
- * Return: A pointer to be filled memory area @s
+ * Return: changed the array with new value for n bytes
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int ind;
-	unsigned char *memory = s, value = c;
+	int i = 0;
 
-	for (ind = 0; ind < n; ind++)
-		memory[ind] = value;
+	for (; n > 0; i++)
+	{
+		s[i] = b;
+		n--;
+	}
 
-	return (memory);
+	return (s);
 }
